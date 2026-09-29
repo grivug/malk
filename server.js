@@ -182,7 +182,11 @@ app.get("/api/search/mods", async (req, res) => {
 // ==========================
 // تشغيل السيرفر
 // ==========================
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Minecraft Hub running on port ${PORT}`);
+});
 
     console.log(
         `Minecraft Hub running at http://localhost:${PORT}`
