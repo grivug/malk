@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<link rel="icon" href="giphy.gif">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Hub | الرئيسية</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">⛏️ <span>Minecraft</span> Hub</a>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <nav id="mainNav">
+    <a href="search.html">البحث</a><a href="mods.html">المودات</a>
+    <a href="maps.html">الخرائط</a><a href="admin.html">لوحة التحكم</a>
+    <button id="themeButton" class="icon-btn">🌙</button>
+  </nav>
+</header>
+
+<section class="hero hero-home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">MINECRAFT COMMUNITY</span>
+    <h1>عالمك.<br><span>قواعدك.</span></h1>
+    <p>اكتشف المودات والخرائط والتحديات، وأنشئ مكتبتك الخاصة بسهولة.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mods.html">🧱 استكشف المودات</a>
+      <a class="btn btn-ghost" href="maps.html">🗺️ استكشف الخرائط</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading"><span>FEATURED</span><h2>أحدث المحتوى</h2><p>المحتوى المضاف من الموقع يظهر هنا تلقائيًا.</p></div>
+  <div class="cards" id="featuredMods"></div>
+</section>
+
+<section class="section section-dark">
+  <div class="section-heading"><span>TOOLS</span><h2>إدارة الموقع</h2><p>أضف محتوى جديدًا من لوحة التحكم بدون تعديل ملفات HTML.</p></div>
+  <div class="feature-grid">
+    <a class="feature" href="admin.html"><b>⚙️ لوحة التحكم</b><span>إضافة وتعديل وحذف المحتوى.</span></a>
+    <a class="feature" href="mods.html"><b>🔎 مكتبة المودات</b><span>بحث وفلترة حسب الإصدار والـ Loader.</span></a>
+    <a class="feature" href="maps.html"><b>🗺️ مكتبة الخرائط</b><span>عرض وتحميل الخرائط.</span></a>
+  </div>
+</section>
+
+<footer>© 2026 Minecraft Hub — مشروع واجهة ويب تجريبي.</footer>
+<script src="app.js"></script>
+<script>renderFeaturedMods();</script>
+</body>
+</html>

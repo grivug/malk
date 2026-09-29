@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><link rel="icon" href="giphy.gif"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مودات Minecraft | Minecraft Hub</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><a class="logo" href="index.html">⛏️ <span>Minecraft</span> Hub</a><button class="menu-toggle" id="menuToggle">☰</button>
+<nav id="mainNav"><a href="index.html">الرئيسية</a><a href="mods.html">المودات</a><a href="maps.html">الخرائط</a><a href="admin.html">لوحة التحكم</a><button id="themeButton" class="icon-btn">🌙</button></nav></header>
+
+<main class="section">
+<div class="section-heading"><span>MODS</span><h1>مكتبة المودات</h1><p>ابحث، فلتر، ثم افتح صفحة أي مود.</p></div>
+<div class="toolbar"><div class="search-wrap">🔍<input id="searchInput" placeholder="ابحث عن مود..."></div>
+<select id="versionFilter"><option value="all">كل الإصدارات</option><option>1.21.4</option><option>1.21.1</option><option>1.21.11</option></select>
+<select id="loaderFilter"><option value="all">كل الـ Loaders</option><option>Fabric</option><option>NeoForge</option></select></div>
+<div class="cards" id="modGrid"></div><p id="emptyState" class="empty hidden">لا توجد نتائج.</p>
+</main>
+<footer>© 2026 Minecraft Hub</footer>
+<script src="app.js"></script><script>renderModsPage();</script>
+</body></html>

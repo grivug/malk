@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><link rel="icon" href="giphy.gif"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم | Minecraft Hub</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><a class="logo" href="index.html">⛏️ <span>Minecraft</span> Hub</a><button class="menu-toggle" id="menuToggle">☰</button>
+<nav id="mainNav"><a href="index.html">الرئيسية</a><a href="mods.html">المودات</a><a href="maps.html">الخرائط</a><a href="admin.html">لوحة التحكم</a><button id="themeButton" class="icon-btn">🌙</button></nav></header>
+
+<main class="section">
+<div class="section-heading"><span>ADMIN</span><h1>لوحة التحكم</h1><p>هذه لوحة محلية: البيانات تُحفظ في المتصفح باستخدام localStorage.</p></div>
+
+<div class="admin-tabs"><button class="tab active" data-tab="modsAdmin">🧱 المودات</button><button class="tab" data-tab="mapsAdmin">🗺️ الخرائط</button></div>
+
+<section id="modsAdmin" class="admin-panel">
+<form id="modForm" class="admin-form">
+<input type="hidden" id="modId">
+<label>اسم المود<input id="modName" required></label>
+<label>الوصف<textarea id="modDescription" required></textarea></label>
+<label>رابط الصورة<input id="modImage" type="url" required placeholder="https://..."></label>
+<label>الإصدارات، مفصولة بفاصلة<input id="modVersions" required placeholder="1.21.4,1.21.1"></label>
+<label>Loaders، مفصولة بفاصلة<input id="modLoaders" required placeholder="Fabric,NeoForge"></label>
+<label>الفئة<input id="modCategory" required placeholder="Performance"></label>
+<label>رابط التحميل<input id="modDownload" type="url" required></label>
+<div><button class="btn btn-primary" type="submit">💾 حفظ المود</button><button class="btn btn-ghost" type="button" id="cancelEdit">إلغاء</button></div>
+</form>
+<div class="admin-list" id="adminModsList"></div>
+</section>
+
+<section id="mapsAdmin" class="admin-panel hidden">
+<form id="mapForm" class="admin-form">
+<input type="hidden" id="mapId">
+<label>اسم الخريطة<input id="mapName" required></label>
+<label>الوصف<textarea id="mapDescription" required></textarea></label>
+<label>رابط الصورة<input id="mapImage" type="url" required></label>
+<label>الإصدار<input id="mapVersion" required placeholder="1.21.4"></label>
+<label>رابط التحميل<input id="mapDownload" type="url" required></label>
+<div><button class="btn btn-primary" type="submit">💾 حفظ الخريطة</button><button class="btn btn-ghost" type="button" id="cancelMapEdit">إلغاء</button></div>
+</form>
+<div class="admin-list" id="adminMapsList"></div>
+</section>
+
+<div class="danger-zone"><h3>⚠️ منطقة الخطر</h3><p>يمسح كل المحتوى الذي أضفته محليًا ويعيد البيانات الافتراضية.</p><button id="resetData" class="btn danger">إعادة ضبط البيانات</button></div>
+</main>
+<footer>© 2026 Minecraft Hub</footer><script src="app.js"></script><script>initAdmin();</script>
+</body></html>

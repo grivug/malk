@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <link rel="icon" href="giphy.gif">
+    <link rel="stylesheet" href="search.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>بحث عن المودات - Minecraft Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            ⛏️ Minecraft Hub
+        </div>
+
+        <a href="index.html">الرئيسية</a>
+        <a href="mods.html">المودات</a>
+        <a href="maps.html">الخرائط</a>
+
+    </header>
+
+
+    <main>
+
+        <section class="search-section">
+
+            <h1>🔎 ابحث عن أي مود</h1>
+
+            <p>
+                ابحث عن آلاف المودات من Modrinth
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="مثال: Sodium"
+                >
+
+                <button onclick="searchMods()">
+                    🔍 بحث
+                </button>
+
+            </div>
+
+
+            <div class="filters">
+
+                <div>
+                    <label>إصدار Minecraft</label>
+
+                    <select id="version">
+                        <option value="">كل الإصدارات</option>
+                        <option value="1.21.4">1.21.4</option>
+                        <option value="1.21.1">1.21.1</option>
+                        <option value="1.21">1.21</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <label>Loader</label>
+
+                    <select id="loader">
+                        <option value="">كل الأنواع</option>
+                        <option value="fabric">Fabric</option>
+                        <option value="forge">Forge</option>
+                        <option value="neoforge">NeoForge</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="results">
+
+            <h2>نتائج البحث</h2>
+
+            <div id="resultsContainer" class="cards">
+
+                <div class="empty">
+                    🔎 اكتب اسم مود للبدء
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="search.js"></script>
+
+</body>
+
+</html>
